@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Bruny\HttpHandlers;
 
+use Psr\Http\Server\RequestHandlerInterface;
+
 use function header;
 
-abstract class BaseHandler
+abstract class BaseHandler implements RequestHandlerInterface
 {
     protected object $page;
 
